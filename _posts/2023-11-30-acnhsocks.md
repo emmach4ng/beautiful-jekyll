@@ -113,6 +113,25 @@ for k,v in colors.items():
     print(k, "appears in", v["count"], "socks")
 ~~~
 
+Below is what the above code snippet prints when executed:
+
+~~~
+Pink appears in 44 socks
+Red appears in 43 socks
+Aqua appears in 33 socks
+Orange appears in 28 socks
+Purple appears in 39 socks
+Green appears in 51 socks
+Blue appears in 48 socks
+Yellow appears in 34 socks
+White appears in 89 socks
+Black appears in 65 socks
+Beige appears in 16 socks
+Gray appears in 33 socks
+Brown appears in 11 socks
+Colorful appears in 14 socks
+~~~
+
 ## Conclusion
 
 Through this lab, I learned how to locate, retrieve, and analyze APIs. An aspect of this project that I would like to explore in the future is methods to decrease the time required for the code to execute.
