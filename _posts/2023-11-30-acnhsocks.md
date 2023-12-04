@@ -84,10 +84,35 @@ Ultimately, I found that argyle crew socks, color-blocked socks, frilly knee-hig
 
 ## Counting Colors
 
-Facial images and their corresponding subjects' sexualities were sourced from a "U.S. dating website," and the data is accessible on the study's OSF (Open Science Framework) webpage. The algorithm used in the study is also available to download on the site.
+To record how many socks of each color there are, I created a dictionary called `colors`, which would contain nested dictionaries for each color and its `count`.
 
-## Why?
+Within the same `for` loop that requests a `json` entry for each sock, `colors` is checked for nested dictionaries of the given sock's `Color 1` and `Color 2`. If the color exists in `colors`, one is added to that color's `count`. If the color does not exist in `colors`, a new nested dictionary is created in `colors`. However, to prevent socks with the same color as `Color 1` and `Color 2` from getting counted twice, one is only added to `Color 2`'s `count` if `Color 1` is not equal to `Color 2`. The aforementioned process is outlined in the code below:
 
-Wang and Kosinski state in their authors' note that in their own experiences, they noticed that they "seem to be able to infer personality from the face itself." Thus, they started investigating the accuracy of facial recognition algorithms in making the same inferences.
+~~~
+if data["Color 1"] in colors:
+    colors[data["Color 1"]]["count"] += 1
+else:
+    colors[data["Color 1"]] = {
+        "count": 1
+    }
 
-Based on this context, it is likely that the authors may have been actively seeking for a result that supports their alternative hypothesis.
+    if data["Color 2"] in colors:
+        if data["Color 2"] != data["Color 1"]: # checks if Color 1 and Color 2 are the same so no duplicate counts
+            colors[data["Color 2"]]["count"] += 1
+    else:
+        colors[data["Color 2"]] = {
+            "count": 1
+        }
+~~~
+
+Finally, each color and its frequency is printed by iterating through each `k,v` pair in `colors`.
+
+~~~
+#prints the frequency of each color
+for k,v in colors.items():
+    print(k, "appears in", v["count"], "socks")
+~~~
+
+## Conclusion
+
+Through this lab, I learned how to locate, retrieve, and analyze APIs. An aspect of this project that I would like to explore in the future is methods to decrease the time required for the code to execute.
