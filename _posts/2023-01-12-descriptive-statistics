@@ -1,0 +1,39 @@
+---
+layout: post
+title: Research Meta Analysis - Facial Recognition DNN and Sexuality
+subtitle: Lab 3
+gh-repo:
+gh-badge:
+tags:
+comments: true
+---
+
+## What dataset did you use?
+
+I used a public csv from Github that contains data on every ATP match played in the 2023 season: https://github.com/JeffSackmann/tennis_atp/blob/master/atp_matches_2023.csv
+
+## What do you hope to learn from analyzing this dataset?
+
+To narrow the scope of my analysis, I decided to focus solely on matches in this dataset that Jannik Sinner won, so I hoped to learn about his specific play style and his progression as a player over the course of the season.
+
+## Analysis
+
+1. The variables I looked at
+
+My analysis included Sinner's age, his opponents' age, match duration (minutes), aces, serve points, ranking, opponents' countries of origin, and matches' court surface.
+
+2. Distributions of variables
+
+When observing centers and variability, I used seaborn and pandas to generate visual representations and make calculations respectively.
+
+The mode of his opponents' countries of origin is France, as shown in this bar graph:
+
+![Alt text](image.png)
+
+While this may seem like Sinner is simply better at playing against French and American opponents' it's critical to acknowledge that this bar chart does not account for the difference in total matches played against people of a certain nationality. Thus, this information doesn't help me draw any conclusions about Sinner's play style. However, if the bar chart displayed Sinner's win **rate**, which is a percentage adjusted for the total number of matches played against each nationality, the mode may be more indicative of an overall trend (or lack thereof)
+
+The mode of court surfaces in Sinner's wins is Hard Court
+
+![Alt text](image.png)
+
+Thus, it is likely that Sinner's play style is most suitable for hard courts, which are faster and have lower ball bounces than the other two surfaces. Importantly, the duration of the hard, grass, and clay seasons are approximately the same length, meaning that this graph is likely 

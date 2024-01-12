@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Analyzing APIs - Socks in Animal Crossing New Horizons
-subtitle: Lab 3
+subtitle: Lab 2
 gh-repo:
 gh-badge:
 tags:

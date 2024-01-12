@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Research Meta Analysis - Facial Recognition DNN and Sexuality
-subtitle: Lab 2
+subtitle: Lab 
 gh-repo:
 gh-badge:
 tags:
