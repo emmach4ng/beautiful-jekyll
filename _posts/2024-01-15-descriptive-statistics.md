@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Descriptive Statistic - Analyzing Jannik Sinner's 2023 Season
+title: Descriptive Statistics - Analyzing Jannik Sinner's 2023 Season
 subtitle: Lab 3
 gh-repo:
 gh-badge:
@@ -28,19 +28,19 @@ When observing centers and variability, I used seaborn and pandas to generate vi
 
 **The mode of his opponents' countries of origin is France**, as shown in this bar graph:
 
-![Alt text](loser_ioc.png)
+![Alt text](images/loser_ioc.png)
 
 While this may seem like Sinner is simply better at playing against French and American opponents' it's critical to acknowledge that this bar chart does not account for the difference in total matches played against people of a certain nationality. Thus, this information doesn't help me draw any conclusions about Sinner's play style. However, if the bar chart displayed Sinner's win **rate**, which is a percentage adjusted for the total number of matches played against each nationality, the mode may be more indicative of an overall trend (or lack thereof)
 
 **The mode of court surfaces in Sinner's wins is hard court**
 
-![Alt text](court_surface.png)
+![Alt text](images/court_surface.png)
 
 Thus, it is likely that Sinner's play style is most suitable for hard courts, which are faster and have lower ball bounces than the other two surfaces. Importantly, the duration of the hard, grass, and clay seasons are approximately the same length, meaning that this graph likely displays an accurate trend.
 
 Below is the **distribution of Sinner's points won on-serve per match**:
 
-![Alt text](svpts.png)
+![Alt text](images/svpts.png)
 
 Visually, the data appears nearly zero skew, but it is slightly **skewed right** since the histogram's tail extends further to the right.
 
@@ -55,13 +55,13 @@ Since a mean greater than the median is indicative of a skewed-right distributio
 
 When investigating the relationships between variables in the dataset, I first generated a **scatterplot of Sinner's opponents' age and the match duration**:
 
-![Alt text](loserage_minutes.png)
+![Alt text](images/loserage_minutes.png)
 
 Since there is no consistent trend between changes in Sinner's opponents' ages and changes in the match duration, there is no statistically significant relationship between the two variables. Overall, the age of Sinner's opponent does not have an impact on the speed at which he is able to defeat them.
 
 Then, I generated a scatterplot of **the number of Sinner's aces and the match duration**, with each observation categorized by court surface:
 
-![Alt text](ace_minutes.png)
+![Alt text](images/ace_minutes.png)
 
 Firstly, it can be observed that there is a positive correlation between the number of Sinner's aces and the match duration -- the longer the match goes on, the more chances there are for Sinner to hit an ace.
 
@@ -69,6 +69,6 @@ Secondly, it can be observed that Sinner tends to hit more aces on grass courts 
 
 Moreover, I generated a scatterplot of **Sinner's age and rank**:
 
-![Alt text](rank_age.png)
+![Alt text](images/rank_age.png)
 
 This graph shows a clear relationship between Sinner's age and his ranking. As Sinner got older, or as the season progressed, his ranking steadily climbed (and therefore decreased in numerical value). While one may conclude that this relationship means that getting older caused Sinner's rank to increase, this relationship is likely correlative and not causational, because there are many other factors that can contribute to an increase in ranking other than simply maturity.
