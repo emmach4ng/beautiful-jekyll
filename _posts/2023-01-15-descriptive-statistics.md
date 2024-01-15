@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Research Meta Analysis - Facial Recognition DNN and Sexuality
+title: Descriptive Statistic - Analyzing Jannik Sinner's 2023 Season
 subtitle: Lab 3
 gh-repo:
 gh-badge:
