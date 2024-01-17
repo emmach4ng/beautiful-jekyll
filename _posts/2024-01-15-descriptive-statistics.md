@@ -28,7 +28,7 @@ When observing centers and variability, I used seaborn and pandas to generate vi
 
 **The mode of his opponents' countries of origin is France**, as shown in this bar graph:
 
-![Alt text](images/loser_ioc.png)
+![Alt text](https://emmach4ng.github.io/beautiful-jekyll/assets/img/loser_ioc.png)
 
 While this may seem like Sinner is simply better at playing against French and American opponents' it's critical to acknowledge that this bar chart does not account for the difference in total matches played against people of a certain nationality. Thus, this information doesn't help me draw any conclusions about Sinner's play style. However, if the bar chart displayed Sinner's win **rate**, which is a percentage adjusted for the total number of matches played against each nationality, the mode may be more indicative of an overall trend (or lack thereof)
 
