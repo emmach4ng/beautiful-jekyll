@@ -34,13 +34,13 @@ While this may seem like Sinner is simply better at playing against French and A
 
 **The mode of court surfaces in Sinner's wins is hard court**
 
-![Alt text](images/court_surface.png)
+![Alt text](https://emmach4ng.github.io/beautiful-jekyll/assets/img/court_surface.png)
 
 Thus, it is likely that Sinner's play style is most suitable for hard courts, which are faster and have lower ball bounces than the other two surfaces. Importantly, the duration of the hard, grass, and clay seasons are approximately the same length, meaning that this graph likely displays an accurate trend.
 
 Below is the **distribution of Sinner's points won on-serve per match**:
 
-![Alt text](images/svpts.png)
+![Alt text](https://emmach4ng.github.io/beautiful-jekyll/assets/img/svpts.png)
 
 Visually, the data appears nearly zero skew, but it is slightly **skewed right** since the histogram's tail extends further to the right.
 
@@ -55,13 +55,13 @@ Since a mean greater than the median is indicative of a skewed-right distributio
 
 When investigating the relationships between variables in the dataset, I first generated a **scatterplot of Sinner's opponents' age and the match duration**:
 
-![Alt text](images/loserage_minutes.png)
+![Alt text](https://emmach4ng.github.io/beautiful-jekyll/assets/img/loserage_minutes.png)
 
 Since there is no consistent trend between changes in Sinner's opponents' ages and changes in the match duration, there is no statistically significant relationship between the two variables. Overall, the age of Sinner's opponent does not have an impact on the speed at which he is able to defeat them.
 
 Then, I generated a scatterplot of **the number of Sinner's aces and the match duration**, with each observation categorized by court surface:
 
-![Alt text](images/ace_minutes.png)
+![Alt text](https://emmach4ng.github.io/beautiful-jekyll/assets/img/ace_minutes.png)
 
 Firstly, it can be observed that there is a positive correlation between the number of Sinner's aces and the match duration -- the longer the match goes on, the more chances there are for Sinner to hit an ace.
 
@@ -69,6 +69,6 @@ Secondly, it can be observed that Sinner tends to hit more aces on grass courts 
 
 Moreover, I generated a scatterplot of **Sinner's age and rank**:
 
-![Alt text](images/rank_age.png)
+![Alt text](https://emmach4ng.github.io/beautiful-jekyll/assets/img/rank_age.png)
 
 This graph shows a clear relationship between Sinner's age and his ranking. As Sinner got older, or as the season progressed, his ranking steadily climbed (and therefore decreased in numerical value). While one may conclude that this relationship means that getting older caused Sinner's rank to increase, this relationship is likely correlative and not causational, because there are many other factors that can contribute to an increase in ranking other than simply maturity.
