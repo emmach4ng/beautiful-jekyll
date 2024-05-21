@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Examining Local Investment into Flushing's Small Businesses in Context with NYC
+title: Examining Local Investment in Flushing's Small Businesses in the Context of NYC
 subtitle: Final Project
 gh-repo:
 gh-badge:
