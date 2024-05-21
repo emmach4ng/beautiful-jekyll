@@ -22,13 +22,15 @@ Intrigued by Flushing's thriving ecosystem of small businesses, I wanted to expl
 
 ## The Data and Analysis
 
-To observe potential trends in the amount of external investment in both Flushing and NYC as a whole, I utilized datasets from 2018, 2019, and 2020, which entailed financial information about NYC's various Business Improvement Districts (BIDs).
+To observe potential trends in the amount of external investment in both Flushing and NYC as a whole, I utilized datasets from 2018, 2019, and 2020, which entailed financial information about NYC's various Business Improvement Districts (BIDs). BIDs are overseen by the NYC Department of Small Business Services, meant to catalyze small business formation and success. In the datasets I used for this project, the investment information was separated into distinct categories within the overall budget.
 
 To examine Flushing specifically, I extracted the data from its BID, named the "Downtown Flushing Transit Hub."
 
-Since each year (2018, 2019, 2020) was a separate CSV, I parsed through each year individually. For example, here's how I extracted the data for the year 2018:
+Since each year (2018, 2019, 2020) was a separate CSV, I parsed through each year individually. For example, here's how I extracted Flushing's data for the year 2018 out of the rest of the BIDs:
 
 ~~~
+
+flushing = {} # dictionary to store the data for each year in Flushing
 
 # business improvement district expenditures in 2018
 with open("finalproject/2018_BIDs.csv", "r") as f: 
@@ -53,6 +55,33 @@ with open("finalproject/2018_BIDs.csv", "r") as f:
                 "public safety employees": row["Public Safety staff employed"],
                 "businesses": row["Individual businesses (retail, restaurant, office, etc.)"]
             }
+~~~
+
+I repeated the same process for 2019 and 2020.
+
+Then, to examine the investment for BIDs across NYC, I created variables to add the sum of each metric in each BID in a given year. For example, I used these for 2018:
+
+~~~
+
+budget_2018 = 0
+supportrevenue_2018 = 0
+sanitation_2018 = 0
+marketing_2018 = 0
+publicsafety_2018 = 0
+
+~~~
+
+Additionally, to ultimately find an average for each metric throughout 2018-2020, I initialized the following variables:
+
+~~~
+
+total_budget = 0
+total_supportrevenue = 0
+total_sanitation = 0
+total_marketing = 0
+total_publicsafety = 0
+count_districts = 0
+
 ~~~
 
 ## Sources used
