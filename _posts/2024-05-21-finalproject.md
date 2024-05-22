@@ -84,6 +84,128 @@ count_districts = 0
 
 ~~~
 
+For each year, I looped through each BID/row to find the value for these variables:
+
+~~~
+
+# all of this is in a for-loop that goes through each row of the CSV
+# summation of the rest of the city's expenditures
+        if row["Government grants"] != "": # checks if the cell is empty
+            total_budget += int(row["Assessment revenue"]) + int(row["Government grants"])
+            budget_2018 += int(row["Assessment revenue"]) + int(row["Government grants"])
+        else:
+            total_budget += int(row["Assessment revenue"]) # if gov grants is empty, then just add assessment revenue to the budget
+            budget_2018 += int(row["Assessment revenue"])
+    
+        total_supportrevenue += int(row["Total support and revenue"])
+        supportrevenue_2018 += int(row["Total support and revenue"])
+    
+        if row["Sanitation expenses"] != "": # checks if the cell is empty
+            total_sanitation += int(row["Sanitation expenses"])
+            sanitation_2018 += int(row["Sanitation expenses"])
+    
+        if row["Marketing, holiday lighting, and special event expenses"] != "": # checks if the cell is empty
+            total_marketing += int(row["Marketing, holiday lighting, and special event expenses"])
+            marketing_2018 += int(row["Marketing, holiday lighting, and special event expenses"])
+
+        total_publicsafety += int(row["Public Safety staff employed"])
+        publicsafety_2018 += int(row["Public Safety staff employed"])
+
+~~~
+
+Finally, as each BID/row of the data completed the loop, I added `1` to a counter of the total number of BIDs accounted for: `count_districts`.
+
+When I initially ran the code without the `if` statements, I realized that some of the metrics included in the data contained empty cells. Thus, to fix the Type Error (which prevented the conversion of an empty shell to the type `int`), I had the program skip empty cells.
+
+Overall, from this data, I was able to calculate averages for each metric for the cumulative period 2018-2020 and for each year within the interval. 
+
+For each year, I created a dictionary to store the city-wide data, as follows for the year 2018:
+
+~~~
+
+#2018 city-wide
+data2018 = {
+    "avg_budget" : round(budget_2018 / (count_districts / 3)),
+    "avg_revenue" : round(supportrevenue_2018 / (count_districts / 3)),
+    "avg_sanitation" : round(sanitation_2018 / (count_districts / 3)),
+    "avg_marketing" : round(marketing_2018 / (count_districts / 3)),
+    "avg_publicsafety" : round(publicsafety_2018 / (count_districts / 3)),
+}
+
+~~~
+
+To calculate averages for the entire 2018-2020 period, the mean for each metric was executed as follows:
+
+~~~
+
+# using the completed totals from 2018-2020 combined, calculate the mean expenditures in each category per district in one year.
+avg_budget = round(total_budget / count_districts)
+avg_supportrevenue = round(total_supportrevenue / count_districts)
+avg_sanitation = round(total_sanitation / count_districts)
+avg_marketing = round(total_marketing / count_districts)
+avg_publicsafety = round(total_publicsafety / count_districts)
+
+~~~
+
+Overall, I printed the data such that the following results were yielded:
+
+~~~
+
+Across the NYC Business Improvement Districts from 2018-2020...
+the average budget is $1711900
+the average revenue is $2248739
+the average sanitation expenses is $561177
+the average marketing expenses $408034
+the average number of public safety workers employed was 4
+
+Across the NYC Business Improvement Districts in 2018...
+the average budget is $1562234
+the average revenue is $2066580
+the average sanitation expenses is $529067
+the average marketing expenses $448190
+the average number of public safety workers employed was 5
+
+Across the NYC Business Improvement Districts in 2019...
+the average budget is $1700907
+the average revenue is $2251148
+the average sanitation expenses is $574671
+the average marketing expenses $318905
+the average number of public safety workers employed was 4
+
+Across the NYC Business Improvement Districts in 2020...
+the average budget is $1872560
+the average revenue is $2428490
+the average sanitation expenses is $579792
+the average marketing expenses $457006
+the average number of public safety workers employed was 4
+
+In Flushing...
+the total budget in 2018 : 799833
+total revenue in 2018 : 936108
+sanitation expenses in 2018 : 455046
+marketing expenses in 2018 : 150912
+public safety employees in 2018 : 0
+
+the total budget in 2019 : 842220
+total revenue in 2019 : 991199
+sanitation expenses in 2019 : 436848
+marketing expenses in 2019 : 128662
+public safety employees in 2019 : 0
+
+the total budget in 2020 : 859364
+total revenue in 2020 : 970450
+sanitation expenses in 2020 : 429760
+marketing expenses in 2020 : 102158
+public safety employees in 2020 : 0
+
+~~~
+
+## The Takeaways
+
+### What are the shared trends between NYC broadly and Flushing's BID investment?
+
+
+
 ## Sources used
 
 https://www.osc.ny.gov/files/reports/osdc/pdf/report-10-2012.pdf
