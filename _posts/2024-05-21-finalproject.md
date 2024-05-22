@@ -147,6 +147,20 @@ avg_publicsafety = round(total_publicsafety / count_districts)
 
 ~~~
 
+Lastly, I calculated the averages for the entire 2018-2020 period within Flushing, specifically:
+
+~~~
+
+    print("In Flushing from 2018-2020...")
+    print("the average budget is", "$" + str(round((int(flushing["2018"]["total budget"]) + int(flushing["2019"]["total budget"]) + int(flushing["2020"]["total budget"])) / 3)))
+    print("the average revenue is", "$" + str(round((int(flushing["2018"]["support and revenue"]) + int(flushing["2019"]["support and revenue"]) + int(flushing["2020"]["support and revenue"])) / 3)))
+    print("the average sanitation expenses is", "$" + str(round((int(flushing["2018"]["sanitation expenses"]) + int(flushing["2019"]["sanitation expenses"]) + int(flushing["2020"]["sanitation expenses"])) / 3)))
+    print("the average marketing expenses", "$" + str(round((int(flushing["2018"]["marketing and event expenses"]) + int(flushing["2019"]["marketing and event expenses"]) + int(flushing["2020"]["marketing and event expenses"])) / 3)))
+    print("the average number of public safety workers employed was", round((int(flushing["2018"]["public safety employees"]) + int(flushing["2019"]["public safety employees"]) + int(flushing["2020"]["public safety employees"])) / 3))
+    print("")
+
+~~~
+
 Overall, I printed the data such that the following results were yielded:
 
 ~~~
@@ -179,7 +193,13 @@ the average sanitation expenses is $579792
 the average marketing expenses $457006
 the average number of public safety workers employed was 4
 
-In Flushing...
+In Flushing from 2018-2020...
+the average budget is $833806
+the average revenue is $965919
+the average sanitation expenses is $440551
+the average marketing expenses $127244
+the average number of public safety workers employed was 0
+
 the total budget in 2018 : 799833
 total revenue in 2018 : 936108
 sanitation expenses in 2018 : 455046
@@ -204,9 +224,29 @@ public safety employees in 2020 : 0
 
 ### What are the shared trends between NYC broadly and Flushing's BID investment?
 
+**First**, I noticed that budgets of both Flushing specifically and NYC more broadly are **skewed right**, meaning that the mean is higher than the median of both metrics.
 
+This tells me that in 2020, both the city overall and Flushing saw a greater increase in funding from 2019-2020 than from 2018-2019. This conclusion could potentially be attributed to the COVID-19 pandemic's growth in 2020, which likely induced a greater need for small business support across NYC.
 
-## Sources used
+**Second**, I noticed that the total budget of the Flushing BID never exceeded the city-wide average BID budget between 2018 and 2020. This trend is particularly notable, given that Flushing's small business growth exceeds the growth rate of the rest of NYC. Thus, the amount of small business investment seems to be **negatively correlated** with the rate at which small businesses are formed.
+
+However, as we have learned in class throughout this year, correlation does not necessarily indicate causation. As such, it is unlikely that greater BID investment actually harms the rate of small business formation. Instead, the correlation is likely resultant of a secondary root cause. For example, it is possible that Flushing's relatively consistent influx of immigrants leads to greater small business growth independent of BID investment, and independent growth may have reduced the need of heightened BID investment.
+
+Additionally, on a similar note, the sanitation spending throughout NYC steadily increased from 2018-2020, whereas the sanitation spending in Flushing only decreased from 2018-2020. Even with the onset of the pandemic in 2020, the decline in public sanitation spending, which was especially relevant, seemed to be unaffected by the pandemic's circumstances.
+
+Instead, the overall trend indicates that resources are being diverted from Flushing to instead focus on other BIDs throughout NYC, which are receiving greater amounts of BID support. 
+
+**In conclusion, the experimental results are contrary to my initial hypothesis** that government intervention (through means like BID spending) are positively correlated with Flushing's rapid small business growth rate. Instead, by every metric observed in this project, Flushing receives increasingly less BID support than the city-wide average, indicating a *negative* correlation between BID support and small business formation.
+
+Thus, the resulting question is: what factors are actually driving the success of small businesses in Flushing? As mentioned earlier, the consistent influx of immigrants may be a factor. In a future project, other environmental, political, and cultural factors could be examined to support an alternative hypothesis.
+
+## Sources referenced
 
 https://www.osc.ny.gov/files/reports/osdc/pdf/report-10-2012.pdf
 https://www.osc.ny.gov/press/releases/2021/12/dinapoli-releases-economic-report-greater-flushing-area#:~:text=From%202000%20to%202019%2C%20total,with%20fewer%20than%2010%20employees.
+
+## NYC Open Data Accessed
+
+[FY2018 BIDs](https://data.cityofnewyork.us/City-Government/FY18-BID-Trends-Report-Data/m6ad-jy3s)
+[FY2019 BIDs](https://data.cityofnewyork.us/City-Government/FY19-BID-Trends-Report-Data/gt6r-wh7c)
+[FY2020 BIDs](https://data.cityofnewyork.us/City-Government/FY20-BID-Trends-Report-Data/8eq5-dtjb)
