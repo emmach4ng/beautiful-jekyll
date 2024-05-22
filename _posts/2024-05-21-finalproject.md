@@ -134,7 +134,7 @@ data2018 = {
 
 ~~~
 
-To calculate averages for the entire 2018-2020 period, the mean for each metric was executed as follows:
+To calculate averages for the entire 2018-2020 period, finding the mean for each metric was executed as follows:
 
 ~~~
 
